@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+<title>RUSSIAN ROULETTE</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background-image: url("stripes.png");
+		background-repeat: repeat;
+	}
+
+	#content{
+		background-color: #E8D651;
+		border: thick solid #421E03;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+		margin: 5%;
+		padding: 2% 5%;
+		color: #421E03;
+		text-align: center;
+		font-family: Georgia, sans-serif;
+	}
+
+	#content h1{
+		font-size: 2.5em;
+		margin: 1%;
+	}
+
+	#content h2{
+		font-size: 1.5em;
+		margin-bottom: 5%;
+	}
+
+	#content #roulette button{
+		color: #E8D651;
+		background-color: #A15216;
+		border: none;
+		padding: 5%;
+		font-size: 3em;
+		font-weight: bold;
+	}
+
+</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+	function getRandomArbitrary (min, max) {
+    return Math.floor(Math.random() * (max - min +1)) + min;
+	}
+
+	function shoot(){
+		var result = getRandomArbitrary(1, 6);
+		console.log("The result: " + result);
+		interpret(result);
+	}
+
+	function interpret(result){
+		if(result === 1){
+			alert("YOU DIED!");
+			close();
+		}
+		else{
+			alert("You lived.");
+		}
+	}
+	</script>
+	<div id="content">
+		<h1>Russian Roulette</h1>
+		<h2>Click the button to shoot. Window closes when you lose.</h2>
+
+		<div id="roulette">
+			<button id="shoot" type="button" autofocus onclick="shoot()">SHOOT!</button>
+		</div>
+	</div>
+</body>
