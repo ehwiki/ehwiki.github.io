@@ -1,0 +1,31 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #cccccc;
+}
+
+#wrapper {
+	height: auto;
+	width: 1024px;
+	border-radius: 50px;
+	background-color: white;
+	border: solid medium black;
+	margin: 0 auto;
+	padding: 30px;
+	margin-top: 30px;
+}
+
+#wrapper p {
+	text-align: center;
+	font-size: 3em;
+	font-family: Verdana Georgia sans-serif;
+}
+
+#game {
+	border: thin solid black;
+	margin: 0 auto;
+	display: block;
+}
